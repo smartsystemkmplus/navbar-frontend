@@ -17,7 +17,9 @@ import "./Configs/Yup";
 
 dayjs.locale("id");
 
-function App() {
+function App({
+  platform, // null || "LMS" || "KMS" || "TMS". null value will remove the platform menu button
+}) {
   return (
     <div className="sticky top-0 z-50">
       <Provider store={store}>
@@ -27,7 +29,7 @@ function App() {
               <NiceModal.Provider>
                 <MobileBanner />
                 <ModalPortal />
-                <NewNavbar />
+                <NewNavbar platform={platform} />
               </NiceModal.Provider>
               <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>

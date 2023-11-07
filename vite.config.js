@@ -58,15 +58,6 @@ export default ({ mode }) => {
           "@mantine/hooks": {
             version: pkg.dependencies["@mantine/hooks"],
           },
-          dayjs: {
-            version: pkg.dependencies.dayjs,
-          },
-          axios: {
-            version: pkg.dependencies.axios,
-          },
-          yup: {
-            version: pkg.dependencies.yup,
-          },
         },
       }),
     ],
